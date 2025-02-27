@@ -1,0 +1,7 @@
+<h1> 🎬 All your Movie Lists 🎬 </h1>
+<p> You work so hard, you deserve an escape. 🍿🍷 </p>
+<ol>
+  <% @lists.@movies each do |list|  %>
+  <li><%= list.name %></li>
+  <% end %>
+</ol>
