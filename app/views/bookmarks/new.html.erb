@@ -1,0 +1,10 @@
+<div class="container mt-3" >
+<h1> 🔖 Add a new bookmark </h1>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, collection: Movie.all, label:"Which movies would you like to add to your list?"%>
+    <%= f.submit "Bookmark added", style: 'color: #B7B1F2',class: "btn btn-warning" %>
+  <% end %>
+  <%= link_to "All lists", lists_path, style: 'color: #B7B1F2',class: "btn btn-warning my-3" %>
+
+</div>

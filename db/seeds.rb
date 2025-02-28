@@ -17,3 +17,12 @@ Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
 puts "Finished! Created #{Movie.count} movies."
+
+puts "Creating lists..."
+List.create(name: "Booed up")
+List.create(name: "Girl time")
+List.create(name: "Scream fest")
+List.create(name: "Horror fest")
+List.create(name: "Time with God")
+
+puts "Finished! Created #{List.count} lists."

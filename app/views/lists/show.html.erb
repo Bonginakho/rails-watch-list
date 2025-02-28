@@ -1,2 +1,15 @@
-<h1> 📺 Here is what is in your movie list 📺 </h1>
-<p> <%= @list.@movie%> </p>
+<div class="container mt-3">
+  <h1> 📺 Your Movie list 📺 </h1>
+  <p> <%= @list.name %> </p>
+  <%= link_to "Go back to all your lists" , lists_path(@list), style: 'color: #B7B1F2',class: "btn btn-warning" %>
+  <%= link_to "Add this list to a bookmark" , new_list_bookmark_path(@list), style: 'color: #B7B1F2',class: "btn btn-warning" %>
+    <ol>
+      <% @list.bookmark.each do |bookmark| %>
+        <li><%= bookmark.movie %></li>
+        <li><%= bookmark.list %></li>
+        <li><%= bookmark.comment %></li>
+        <%= link_to " 🗑️ ", bookmark_path(bookmark),
+         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </ol>
+</div>

@@ -1,5 +1,7 @@
-<h1> Make a new List </h1>
-<%= simple_form_for [@movie, @list] do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Add your new movie here", class: "btn btn-warning" %>
-<% end %>
+<div class="container mt-3">
+  <h1> 📑 Make a new List  </h1>
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Add your list here", style: 'color: #B7B1F2',class: "btn btn-warning" %>
+  <% end %>
+</div>
